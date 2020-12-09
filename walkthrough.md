@@ -21,14 +21,22 @@ MERN is one of the most widely used stacks for modern web development. Composed 
 ## Provided Set Ups
 
 - Sexy README
-- Frontend and backend setup
+- Frontend and backend skeletons
 - Frontend testing with Cypress
 - Backend testing with Jest
 - Frontend and backend linting with ESLint
+- Continuous integration tests with CircleCI
 
 ## Project Structure
 
 The frontend code is contained in `client/`, and `api/` contains the backend code. Each corresponding directory contains the respective configurations for testing and linting, as well as a `package.json` file with the necessary production and development packages.
+
+# README
+
+A sexy readme is provided. A couple things to change include
+
+- Nonprofit logo (replaces Hack4Impact logo)
+- Team member images & links
 
 # Client
 
@@ -83,3 +91,23 @@ The linting and testing frameworks have been provided.
 Linting uses ESLint linter, with Prettier style guides. Customization for specific style changes in `.prettierrc`. To run linting, `yarn lint` within the `api` directory.
 
 Backend testing uses Jest. There is a default configuration for Jest set up. Tests can be found in `api/test`. Simply run `yarn test` to run the tests.
+
+# Continuous Integration
+
+Continuous integration is just the practice of automatically running tests for every single code push, which can be automated by services such as CircleCI. To enable these, simply go to the CircleCI dashboard (found at https://app.circleci.com/pipelines/github/hack4impact-uiuc) and sign in with your GitHub. You should then be able to select Hack4Impact organization in the top left corner, where you'll see all of the current pipelines for the projects. Find and set up your project, and select that there is already a configuration.
+
+In `.circleci/config`, there is an outline of the CI jobs that are used. These include:
+
+- `frontend_lint`: Ensuring `yarn lint` within the `client/` directory
+- `frontend_test`: Ensuring `yarn test` within the `client/` directory
+- `backend_lint`: Ensuring `yarn lint` within the `api/` directory
+- `backend_test`: Ensuring `yarn test` within the `api/` directory
+
+`frontend_test` is a modification of Cypress CircleCI orb for `cypress/run`, which depends on `frontend_test_install`, a modification for `cypress/install`.
+
+If you have set up Cypress in the dashboard and gotten your project id, add it to the CircleCI environment variables and add the `record: true` flag.
+
+By default for `frontend_test`, parallelism is turned off. To enable parallelism, add the flags
+
+- `parallel`: `true`
+- `parallelism`: `4`
