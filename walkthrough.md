@@ -1,16 +1,3 @@
-<!-- To compile the markdown to pdf
-pandoc -t latex -o walkthrough.pdf walkthrough.md
--->
-
----
-title:
-author:
-header-includes:
-    - \usepackage{setspace}
-    - \onehalfspacing
-    - \usepackage{courier}
----
-
 # Hack4Impact UIUC - MERN Template
 
 ## Background
@@ -25,11 +12,11 @@ MERN is one of the most widely used stacks for modern web development. Composed 
 - Frontend testing with Cypress
 - Backend testing with Jest
 - Frontend and backend linting with ESLint
-- Continuous integration tests with CircleCI
+- Continuous integration tests with GitHub Actions
 
 ## Project Structure
 
-The frontend code is contained in `client/`, and `api/` contains the backend code. Each corresponding directory contains the respective configurations for testing and linting, as well as a `package.json` file with the necessary production and development packages.
+The frontend code is contained in `client/` and the backend code is contained in `api/`. Each corresponding directory contains the respective configurations for testing and linting, as well as a `package.json` file with the necessary production and development packages.
 
 # README
 
@@ -52,11 +39,13 @@ To run, `yarn` to install dependencies, and then `yarn start` to start the devel
 
 In `/src`, the React components will be developed. Given is a single `Home` component located in `/src/pages` which connects to the backend. It simply just renders an `h1` header and two `p` tags. If the API is not connected, the second tag will render the default state that indicates that the API is not connected. If it is connected, the state gets updated upon API fetch.
 
-## Linting, Typechecking, and Testing
+## Linting, Formatting, Typechecking, and Testing
 
-The linting and testing frameworks have been provided.
+The linting, formatting, and testing frameworks have been provided.
 
-Linting uses ESLint linter, with Prettier and Airbnb style guides. Customization for specific rules can be entered in `.eslintrc.json`, and style changes in `.prettierrc`. To run linting, `yarn lint` within the `client` directory.
+Linting uses ESLint linter, with the Airbnb style guide. Customization for specific rules can be entered in `.eslintrc.json`. To run linting, `yarn lint` within the `client` directory.
+
+Formatting uses `prettier` and can be customized in `.prettierrc`. Run formatting with `yarn format` in the `client` directory.
 
 Type checking uses Flow, which can be run with `yarn flow`. For a file to be detected by flow, add `// @flow` at the top. By default, type checking is not enabled in continuous integration as it hinders fast project development.
 
@@ -84,30 +73,32 @@ To run, `yarn` to install dependencies, and then `yarn start` to start the devel
 
 Currently there is a single endpoint at `/api/home` which returns the text for home.
 
-## Linting and Testing
+## Linting, Formatting Testing
 
-The linting and testing frameworks have been provided.
+The linting, formatting, and testing frameworks have been provided.
 
-Linting uses ESLint linter, with Prettier style guides. Customization for specific style changes in `.prettierrc`. To run linting, `yarn lint` within the `api` directory.
+Linting uses ESLint linter, with the Airbnb style guide. Customization for specific rules can be entered in `.eslintrc.json`. To run linting, `yarn lint` within the `api` directory.
+
+Formatting uses `prettier` and can be customized in `.prettierrc`. Run formatting with `yarn format` in the `api` directory.
 
 Backend testing uses Jest. There is a default configuration for Jest set up. Tests can be found in `api/test`. Simply run `yarn test` to run the tests.
 
 # Continuous Integration
 
-Continuous integration is just the practice of automatically running tests for every single code push, which can be automated by services such as CircleCI. To enable these, simply go to the CircleCI dashboard (found at https://app.circleci.com/pipelines/github/hack4impact-uiuc) and sign in with your GitHub. You should then be able to select Hack4Impact organization in the top left corner, where you'll see all of the current pipelines for the projects. Find and set up your project, and select that there is already a configuration.
+Continuous integration is just the practice of automatically running tests for every single code push, which can be automated by services such as GitHub Actions. To edit these, modify the `yaml` configuration files in `.github/workflows`.
 
-In `.circleci/config`, there is an outline of the CI jobs that are used. These include:
+Currently, provided jobs include:
 
-- `frontend_lint`: Ensuring `yarn lint` within the `client/` directory
-- `frontend_test`: Ensuring `yarn test` within the `client/` directory
-- `backend_lint`: Ensuring `yarn lint` within the `api/` directory
-- `backend_test`: Ensuring `yarn test` within the `api/` directory
-
-`frontend_test` is a modification of Cypress CircleCI orb for `cypress/run`, which depends on `frontend_test_install`, a modification for `cypress/install`.
+- `client` `lint` : Ensuring `yarn lint` within the `client/` directory
+- `client` `test` : Ensuring `yarn test` within the `client/` directory
+- `client` `format` : Ensuring `yarn format:check` within the `client/` directory
+- `client` `build` : Ensuring `yarn build` within the `client/` directory
+- `api` `lint` : Ensuring `yarn lint` within the `api/` directory
+- `api` `test` : Ensuring `yarn test` within the `api/` directory
+- `api` `format` : Ensuring `yarn format:check` within the `api/` directory
 
 If you have set up Cypress in the dashboard and gotten your project id, add it to the CircleCI environment variables and add the `record: true` flag.
 
-By default for `frontend_test`, parallelism is turned off. To enable parallelism, add the flags
+By default for `client` `test`, parallelism is turned off. To enable parallelism, add the flag
 
 - `parallel`: `true`
-- `parallelism`: `4`

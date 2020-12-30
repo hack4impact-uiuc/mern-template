@@ -34,7 +34,7 @@ Built with [Express](https://expressjs.com/) and [MongoDB](https://www.mongodb.c
 
 ## Development
 
-If you are working with the API, remember to change the `baseURL` in [`client/src/utils/api.js`](https://github.com/hack4impact-uiuc/ymca/blob/master/client/src/utils/api.js) to the local server `http://localhost:9000/`.
+If you are working with the API, remember to change the `BASE_URL` in [`client/src/utils/apiWrapper.js`](https://github.com/hack4impact-uiuc/mern-template/blob/master/client/src/utils/apiWrapper.js) to the local server `http://localhost:9000/`.
 
 ### Code Style
 
