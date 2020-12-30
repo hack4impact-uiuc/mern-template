@@ -24,7 +24,7 @@ Use Cypress to test. To run, `yarn test` in the directory.
 
 Use [ESLint](https://eslint.org) with [Prettier](https://prettier.io/) and the [Airbnb Javascript Style Guide](https://github.com/airbnb/javascript).
 
-To run, `yarn lint` in the directory.
+To run, `yarn lint` and `yarn format` in the directory.
 
 ### Type Checking
 
