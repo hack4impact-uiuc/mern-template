@@ -26,7 +26,7 @@ function Home(): Node {
       <p>
         Below will tell you if the API is running.
         <br />
-        `${text}`
+        {text}
       </p>
     </>
   );
