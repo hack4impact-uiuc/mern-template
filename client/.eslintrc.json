@@ -8,13 +8,10 @@
     "airbnb",
     "plugin:flowtype/recommended",
     "plugin:import/errors",
-    "plugin:import/warnings",
-    "prettier",
-    "prettier/react"
+    "plugin:import/warnings"
   ],
-  "plugins": ["flowtype", "import", "prettier", "react", "react-hooks"],
+  "plugins": ["flowtype", "import", "react", "react-hooks"],
   "rules": {
-    "global-require": [1],
     "import/order": [
       "warn",
       {
@@ -29,7 +26,6 @@
         "newlines-between": "always"
       }
     ],
-    "prettier/prettier": "error",
     "react/jsx-filename-extension": [1, { "extensions": [".js", "jsx"] }]
   }
 }
