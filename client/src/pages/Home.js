@@ -2,22 +2,20 @@
 import React, { useEffect, useState } from 'react';
 import type { Node } from 'react';
 
+import { getSampleResponse } from '../utils/apiWrapper';
+
 import '../css/Home.css';
 
 function Home(): Node {
   const [text, setText] = useState('You did not run local API!');
 
   useEffect(() => {
-    const url = `http://localhost:9000/api/home`;
+    const populateText = async () => {
+      const resp = await getSampleResponse();
+      if (!resp.error) setText(resp.data.result);
+    };
 
-    fetch(url)
-      .then(response => {
-        if (!response.ok) throw response;
-        return response.json();
-      })
-      .then(json => {
-        if (json) setText(json.result);
-      });
+    populateText();
   }, []);
 
   return (
