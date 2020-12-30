@@ -4,8 +4,8 @@
   "license": "MIT",
   "scripts": {
     "start": "if-env NODE_ENV=production ?? npm run start:prod || npm run start:dev",
-    "start:prod": "dotenv node src/appListener.js && node ./bin/www",
-    "start:dev": "NODE_ENV=dev dotenv node src/appListener.js && node ./bin/www",
+    "start:prod": "node -r dotenv/config ./bin/www",
+    "start:dev": "nodemon -r dotenv/config ./bin/www",
     "lint": "eslint --fix src -c .eslintrc.json --ext js",
     "format": "prettier --write \"./**/*.{js,jsx,json,md}\"",
     "format:check": "prettier --check \"./**/*.{js,jsx,json,md}\"",
@@ -31,6 +31,7 @@
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-prettier": "^3.1.1",
     "jest": "^25.1.0",
+    "nodemon": "^2.0.6",
     "prettier": "^1.18.2",
     "supertest": "^4.0.2"
   },
