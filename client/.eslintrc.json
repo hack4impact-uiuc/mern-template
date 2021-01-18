@@ -1,16 +1,10 @@
 {
-  "env": {
-    "browser": true,
-    "node": true
-  },
-  "parser": "babel-eslint",
   "extends": [
-    "airbnb",
-    "plugin:flowtype/recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings"
+    "plugin:@hack4impact-uiuc/base",
+    "plugin:@hack4impact-uiuc/react",
+    "plugin:flowtype/recommended"
   ],
-  "plugins": ["flowtype", "import", "react", "react-hooks"],
+  "plugins": ["@hack4impact-uiuc", "flowtype"],
   "rules": {
     "import/order": [
       "warn",
