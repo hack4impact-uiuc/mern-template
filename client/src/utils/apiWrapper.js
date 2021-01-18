@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const BASE_URL = process.env.BACKEND_URL ?? 'http://localhost:9000/api';
+const BASE_URL = process.env.REACT_APP_VERCEL_URL
+  ? `https://${process.env.REACT_APP_VERCEL_URL}/api`
+  : 'http://localhost:9000/api';
 
 /**
  * Returns a sample API response to demonstrate a working backend
