@@ -14,7 +14,7 @@ const app = express();
 const { errorHandler } = require('./middleware');
 
 const environment = process.env.NODE_ENV || 'dev';
-if (environment != 'production') {
+if (environment !== 'production') {
   dotenv.config({
     path: path.resolve(__dirname, `../config/${environment}.env`),
   });
