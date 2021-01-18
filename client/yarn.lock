@@ -1225,10 +1225,10 @@
     debug "^3.1.0"
     lodash.once "^4.1.1"
 
-"@hack4impact-uiuc/eslint-plugin@^2.0.5":
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/@hack4impact-uiuc/eslint-plugin/-/eslint-plugin-2.0.5.tgz#eda219c0849f6fdcdb68b135120a82c615ee81bc"
-  integrity sha512-GDjVQFYR+gZeHoHJByPBnRzRO73F1r2Qb0HHpM0Vvi2bjq4KfpeGOuZBgPDzeewuNeYMuDc0alIzjl2hN+6iAA==
+"@hack4impact-uiuc/eslint-plugin@^2.0.6":
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/@hack4impact-uiuc/eslint-plugin/-/eslint-plugin-2.0.6.tgz#3f07c1bc2534c80e534080897b1d92899ef33d6b"
+  integrity sha512-cc4sda7IKQ/N1o3wbVan2JOM/dDl2tVXZFVE+Xii5i2FdpWp/BWagC9gmSgdwR9SrvDfALdOfdx6ozI1YCKQ+w==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^4.13.0"
     "@typescript-eslint/parser" "^4.13.0"

@@ -7,9 +7,10 @@
     "start:prod": "node ./bin/www",
     "start:dev": "nodemon ./bin/www",
     "lint": "eslint src --ext js,jsx",
-    "lint:fix": "eslint --fix src --ext js,jsx",
-    "format": "prettier --write \"./**/*.{js,jsx,json,md}\"",
-    "format:check": "prettier --check \"./**/*.{js,jsx,json,md}\"",
+    "lint:ci": "eslint src --ext js --rule 'no-unused-vars: 0'",
+    "lint:fix": "eslint --fix src --ext js",
+    "format": "prettier --write \"./**/*.{js,json,md}\"",
+    "format:check": "prettier --check \"./**/*.{js,json,md}\"",
     "test": "NODE_ENV=test && jest"
   },
   "dependencies": {
@@ -26,7 +27,7 @@
     "morgan": "~1.9.1"
   },
   "devDependencies": {
-    "@hack4impact-uiuc/eslint-plugin": "^2.0.5",
+    "@hack4impact-uiuc/eslint-plugin": "^2.0.6",
     "eslint": "^6.5.1",
     "jest": "^25.1.0",
     "nodemon": "^2.0.6",

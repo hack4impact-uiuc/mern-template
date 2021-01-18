@@ -51,7 +51,7 @@ jobs:
 
       - name: Run linter
         working-directory: ./api
-        run: yarn lint
+        run: yarn lint:ci
 
   test:
     runs-on: ubuntu-latest
