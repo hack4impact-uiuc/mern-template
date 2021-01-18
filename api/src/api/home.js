@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 const { errorWrap } = require('../middleware');
 
-const Home = require('../models/home');
+// uncomment to use the schema
+// const Home = require('../models/home');
 
 router.get(
   '/',

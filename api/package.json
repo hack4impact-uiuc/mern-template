@@ -6,8 +6,8 @@
     "start": "if-env NODE_ENV=production ?? npm run start:prod || npm run start:dev",
     "start:prod": "node ./bin/www",
     "start:dev": "nodemon ./bin/www",
-    "lint": "eslint src --ext js,jsx",
-    "lint:fix": "eslint --fix src --ext js",
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src",
     "format": "prettier --write \"./**/*.{js,json,md}\"",
     "format:check": "prettier --check \"./**/*.{js,json,md}\"",
     "test": "NODE_ENV=test && jest"

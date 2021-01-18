@@ -2,13 +2,15 @@ const createError = require('http-errors');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const express = require('express');
-const fs = require('fs');
 const helmet = require('helmet');
 const logger = require('morgan');
-const mongoose = require('mongoose');
 const path = require('path');
 const routes = require('./routes');
 const bodyParser = require('body-parser');
+
+// uncomment these if you use them
+// const mongoose = require('mongoose');
+// const fs = require('fs');
 
 const app = express();
 const { errorHandler } = require('./middleware');
