@@ -1,17 +1,7 @@
 {
-  "parser": "babel-eslint",
-  "parserOptions": {
-    "ecmaVersion": 6
-  },
-  "env": {
-    "es6": true
-  },
-  "extends": ["prettier"],
-  "plugins": ["prettier"],
+  "plugins": ["@hack4impact-uiuc"],
+  "extends": ["plugin:@hack4impact-uiuc/base"],
   "rules": {
-    "prettier/prettier": "error"
-  },
-  "env": {
-    "es6": true
+    "require-await": "off"
   }
 }
