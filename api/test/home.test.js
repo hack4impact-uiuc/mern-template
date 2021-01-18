@@ -2,6 +2,10 @@ const app = require('../src/app');
 const mongoose = require('mongoose');
 const request = require('supertest');
 
+afterAll(async () => {
+  await mongoose.connection.close();
+});
+
 describe('GET / ', () => {
   test('API should return working message', async () => {
     const response = await request(app).get('/');
