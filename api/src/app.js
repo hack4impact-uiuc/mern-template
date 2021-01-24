@@ -49,7 +49,7 @@ app.get('/', (req, res) => res.json('API working!'));
 
 app.get('/favicon.ico', (req, res) => res.status(204));
 
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
