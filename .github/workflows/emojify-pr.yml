@@ -10,11 +10,11 @@ on:
 # on: pull_request
 
 jobs:
-emojify-pr-title:
-  runs-on: ubuntu-latest
-  name: Emojify PR Title
-  steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Emojify PR Title
-      uses: pineapplelol/emojify-pr-title@v1.2
+  emojify-pr-title:
+    runs-on: ubuntu-latest
+    name: Emojify PR Title
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Emojify PR Title
+        uses: pineapplelol/emojify-pr-title@v1.2
