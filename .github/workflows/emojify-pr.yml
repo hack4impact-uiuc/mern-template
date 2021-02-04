@@ -1,14 +1,15 @@
-name: Emojify PR Title
+# uncomment the file below to enable the Emojify PR Title workflow
 
-on: pull_request
+# name: Emojify PR Title
 
-# uncomment the block below to enable the Emojify PR Title workflow
-jobs:
-  # emojify-pr-title:
-  #   runs-on: ubuntu-latest
-  #   name: Emojify PR Title
-  #   steps:
-  #     - name: Checkout
-  #       uses: actions/checkout@v2
-  #     - name: Emojify PR Title
-  #       uses: pineapplelol/emojify-pr-title@v1.2
+# on: pull_request
+
+# jobs:
+# emojify-pr-title:
+#   runs-on: ubuntu-latest
+#   name: Emojify PR Title
+#   steps:
+#     - name: Checkout
+#       uses: actions/checkout@v2
+#     - name: Emojify PR Title
+#       uses: pineapplelol/emojify-pr-title@v1.2
