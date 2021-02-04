@@ -16,7 +16,7 @@ export const getSampleResponse = () => {
         'Content-Type': 'application/JSON',
       },
     })
-    .catch(error => ({
+    .catch((error) => ({
       type: 'GET_SAMPLE_FAIL',
       error,
     }));
@@ -26,7 +26,7 @@ export const getSampleResponse = () => {
  * Executes a sample POST request
  * Returns POST_SAMPLE_FAIL upon failure
  */
-export const addSampleResponse = body => {
+export const addSampleResponse = (body) => {
   const requestString = `${BASE_URL}/home`;
   return axios
     .post(requestString, body, {
@@ -34,7 +34,7 @@ export const addSampleResponse = body => {
         'Content-Type': 'application/JSON',
       },
     })
-    .catch(error => ({
+    .catch((error) => ({
       type: 'POST_SAMPLE_FAIL',
       error,
     }));

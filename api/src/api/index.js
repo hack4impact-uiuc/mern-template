@@ -1,5 +1,6 @@
-const home = require('./home');
+const express = require('express');
+const router = express.Router();
 
-module.exports = {
-  home,
-};
+router.use('/home', require('./home'));
+
+module.exports = router;
