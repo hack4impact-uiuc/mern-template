@@ -7,7 +7,7 @@ defaults:
     working-directory: ./api
 
 jobs:
-  format:
+  api-format:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -30,7 +30,7 @@ jobs:
       - name: Check formatting
         run: yarn format:check
 
-  lint:
+  api-lint:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -53,7 +53,7 @@ jobs:
       - name: Run linter
         run: yarn lint
 
-  test:
+  api-test:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository

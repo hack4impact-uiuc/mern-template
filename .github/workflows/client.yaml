@@ -7,7 +7,7 @@ defaults:
     working-directory: ./client
 
 jobs:
-  format:
+  client-format:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -30,7 +30,7 @@ jobs:
       - name: Check formatting
         run: yarn format:check
 
-  lint:
+  client-lint:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -53,7 +53,7 @@ jobs:
       - name: Run linter
         run: yarn lint
 
-  build:
+  client-build:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -76,7 +76,7 @@ jobs:
       - name: Build application
         run: yarn build
 
-  test:
+  client-test:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
