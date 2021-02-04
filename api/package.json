@@ -26,7 +26,7 @@
     "morgan": "~1.10.0"
   },
   "devDependencies": {
-    "@hack4impact-uiuc/eslint-plugin": "^2.0.9",
+    "@hack4impact-uiuc/eslint-plugin": "^2.0.10",
     "eslint": "^7.18.0",
     "jest": "^26.6.3",
     "nodemon": "^2.0.7",
