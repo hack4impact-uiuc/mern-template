@@ -1,6 +1,6 @@
 name: Emojify PR Title
 
-# comment out lines 6-9 and uncomment line 11 to to enable the Emojify PR Title workflow
+# delete lines 5-8 and uncomment line 11 to to enable the Emojify PR Title workflow
 
 on:
   pull_request:
