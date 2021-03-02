@@ -6,7 +6,7 @@
 </h1>
 
 <p align="center">
-    <img src="https://img.shields.io/circleci/build/github/hack4impact-uiuc/mern-template/main?style=flat-square">
+    <img src="https://img.shields.io/github/checks-status/hack4impact-uiuc/mern-template/main?style=flat-square">
     <img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square">
 </p>
 
@@ -58,4 +58,4 @@ This application is built with React, Express, MongoDB, and tested with Cypress 
 
 ## License
 
-[MIT](https://github.com/hack4impact-uiuc/ymca/blob/master/LICENSE) licensed. Copyright © 2020 [Hack4Impact UIUC](https://github.com/hack4impact-uiuc).
+[MIT](https://github.com/hack4impact-uiuc/ymca/blob/master/LICENSE) licensed. Copyright © 2021 [Hack4Impact UIUC](https://github.com/hack4impact-uiuc).
