@@ -7,7 +7,7 @@
  */
 const createResponse = (status, message, data) => ({
   message,
-  success: 200 <= status < 300,
+  success: 200 <= status && status < 300,
   result: data,
 });
 
