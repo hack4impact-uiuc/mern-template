@@ -23,7 +23,8 @@
     "isomorphic-unfetch": "^3.0.0",
     "mongodb": "^3.3.2",
     "mongoose": "^5.11.13",
-    "morgan": "~1.10.0"
+    "morgan": "~1.10.0",
+    "mpath": "^0.8.4"
   },
   "devDependencies": {
     "@hack4impact-uiuc/eslint-plugin": "^2.0.10",
