@@ -22,7 +22,7 @@
     "if-env": "^1.0.4",
     "isomorphic-unfetch": "^3.0.0",
     "mongodb": "^3.3.2",
-    "mongoose": "^5.11.13",
+    "mongoose": "^5.13.15",
     "morgan": "~1.10.0",
     "mpath": "^0.8.4"
   },
